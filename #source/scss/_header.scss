@@ -1,0 +1,44 @@
+header.header {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 12;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            a {
+                font-family: "Inter", sans-serif;
+                color: #fff;
+                font-weight: 500;
+                font-size: 18px;
+                display: inline-block;
+                padding: 40px 25px 25px 25px;
+                text-decoration: none;
+
+                &.active {
+                    background: $main-green;
+                    color: #181A1C;
+                }
+            }
+        }
+    }
+}
+
+
+.header__logo {
+    padding-bottom: 15px;
+    display: inline-block;
+
+    img {
+        width: 100%;
+        max-width: 270px;
+    }
+}

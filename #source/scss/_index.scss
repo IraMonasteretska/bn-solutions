@@ -1,0 +1,262 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh + 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(#0B1E25, 0.5);
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.hero__content {
+    text-align: center;
+
+    h1 {
+        margin-bottom: 12px;
+    }
+
+    p {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 48px;
+    }
+}
+
+.hero-wave {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    height: 150px;
+    object-fit: 100% 100%;
+    object-position: 100% 0;
+}
+
+.features {
+    padding: 0 0 90px 0;
+
+    h2 {
+        text-align: right;
+        margin-bottom: 52px;
+    }
+}
+
+.features-item {
+    border-radius: 10px;
+    border: 1px solid #181A1C;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 20px 20px 80px;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 20px;
+    min-height: 178px;
+
+    .wrapper {
+        position: relative;
+        z-index: 2;
+    }
+
+    h5 {
+        margin-bottom: 12px;
+        color: #181A1C;
+        font-family: "Sora", sans-serif;
+        font-size: 24px;
+        line-height: 110%;
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+        color: #181A1C;
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 0 0 10px 0;
+        background: $main-green;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transition: 0.5s;
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+
+.features__icon {
+    width: 40px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 2;
+}
+
+.ctasection {
+    position: relative;
+    overflow: hidden;
+    padding: 63px 0;
+    min-height: 340px;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(#181A1C, 0.3);
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.doelgroepen {
+    padding: 100px 0;
+    background: #101010;
+}
+
+.doelgroepen__head {
+    text-align: center;
+    margin-bottom: 52px;
+
+    h2 {
+        margin-bottom: 24px;
+    }
+
+    p {
+        color: #fff;
+        font-weight: 500;
+
+        span {
+            color: $main-green;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.accordeon-item {
+    border-bottom: 1px solid #C9C9C9;
+
+    &:nth-child(1) {
+        border-top: 1px solid #C9C9C9;
+    }
+
+    &.active {
+        .accordeon-header {
+            .accordeon-arrow {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+}
+
+.accordeon-header {
+    position: relative;
+    min-height: 112px;
+    padding: 10px 20px 10px 52px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    h5 {
+        margin: 0;
+        color: #fff;
+        font-family: "Sora", sans-serif;
+        font-weight: 600;
+        line-height: 110%;
+        font-size: 24px;
+    }
+
+    .accordeon-arrow {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.3s;
+        width: 32px;
+    }
+
+}
+
+.accordeon-body {
+    display: none;
+    padding-left: 52px;
+    padding-bottom: 60px;
+
+    .description {
+        max-width: 545px;
+
+        p {
+            color: #fff;
+            font-size: 14px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .imgwrap {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.kernsterktes {
+    padding: 100px 0 120px;
+}
+
+.kernsterktes-content {
+    h2 {
+        margin-bottom: 88px;
+    }
+
+    .imgwrap {
+        img {
+            border-radius: 10px;
+            vertical-align: top;
+        }
+    }
+}
+
+
+
+
+
+//  font-family: "Inter", sans-serif;
+//   font-family: "Manrope", sans-serif;
+// font-family: "Sora", sans-serif;
