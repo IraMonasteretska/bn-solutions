@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 500px;
 
     &::after {
         content: '';
@@ -615,6 +616,55 @@
     }
 }
 
+@media(max-width:1599.8px) {
+    .hero__content {
+        h1 {
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .kernsterktes-content h2 {
+        margin-bottom: 20px;
+    }
+
+    .hero-wave {
+        height: 120px;
+    }
+
+    .features-item h5 {
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+
+    .kernsterktes__item h5,
+    .whatwedo__item h5 {
+        margin-bottom: 10px;
+    }
+
+    .whatwedo__header h2 {
+        margin-bottom: 60px;
+    }
+
+    .businessnav h3 {
+        margin-bottom: 40px;
+    }
+
+    .circlebox p {
+        font-size: 48px;
+
+        span {
+            font-size: 21px;
+        }
+    }
+
+    .businessnav {
+        padding-bottom: 120px;
+    }
 
 
 
@@ -624,7 +674,315 @@
 
 
 
+    .accordeon-header h5,
+    .kernsterktes__item h5,
+    .whatwedo__item h5 {
+        font-size: 21px;
+    }
 
+    .quotesection .description p {
+        font-size: 32px;
+    }
+
+    .quotesection .description p.author {
+        font-size: 21px;
+    }
+
+}
+
+@media(max-width:1399.8px) {
+    .circlebox {
+        max-width: 326px;
+    }
+
+    .hero-wave {
+        height: 100px;
+    }
+
+    .whatwedo__header span {
+        font-size: 18px;
+        height: 45px;
+    }
+
+    .quotesection .description p {
+        font-size: 28px;
+    }
+
+    .contact-box h3 {
+        margin-bottom: 30px;
+    }
+
+    .contact-box ul li {
+        margin-bottom: 25px;
+    }
+
+
+}
+
+@media(max-width:1199.8px) {
+    .circlebox {
+        max-width: 286px;
+    }
+
+    .features-item {
+        padding: 20px 20px 20px 60px;
+        height: 100%;
+        margin: 0;
+    }
+
+    .features__icon {
+        width: 30px;
+    }
+
+    .features-wrap {
+        .col-lg-4 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .features-item::after {
+        width: 20px;
+        height: 20px;
+    }
+
+    .overons {
+        padding-bottom: 120px;
+    }
+
+    .row.customspace50 {
+        margin-left: -12px;
+        margin-right: -12px;
+
+        &>* {
+            padding-right: 12px;
+            padding-left: 12px;
+        }
+    }
+
+    .circlebox p {
+        font-size: 36px;
+
+        span {
+            font-size: 18px;
+        }
+    }
+
+    .limg img,
+    .rimg img {
+        max-width: 100%;
+    }
+
+    .quotesection .description p {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+
+    .quotesection .description p.author {
+        font-size: 18px;
+    }
+
+    .whatwedo__item p {
+        font-size: 14px;
+    }
+
+}
+
+@media(max-width:991.8px) {
+    .circlebox {
+        margin-left: -40px;
+        max-width: 190px;
+    }
+
+    .accordeon-header {
+        min-height: 100px;
+    }
+
+    .kernsterktes-content .imgwrap {
+        display: none;
+    }
+
+    .accordeon-item .accordeon-header .imgwrap img {
+        max-width: 130px;
+        max-height: 60px;
+    }
+
+    .whatwedo__item {
+        height: auto;
+        min-height: initial;
+        margin-bottom: 20px;
+    }
+
+    .whatwedo__footer {
+        margin-top: 50px;
+    }
+
+    .quotesection .description img {
+        width: 30px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .map iframe {
+        aspect-ratio: 16 / 8;
+        vertical-align: top;
+    }
+
+
+
+
+
+
+    .whatwedo {
+        padding-bottom: 70px;
+    }
+
+    .features,
+    .businessnav {
+        padding-bottom: 70px;
+    }
+
+    .doelgroepen,
+    .kernsterktes,
+    .referenties,
+    .overons,
+    .quotesection,
+    .contacts {
+        padding: 70px 0;
+    }
+
+    .features h2 {
+        margin-bottom: 30px;
+    }
+
+
+
+    .accordeon-body .description {
+        margin-bottom: 30px;
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .quotesection .description p {
+        font-size: 21px;
+    }
+}
+
+@media(max-width:767.8px) {
+    .circlebox {
+        margin-left: -40px;
+        max-width: 140px;
+
+        p {
+            font-size: 24px;
+
+            span {
+                margin-top: 0;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .quotesection .description img {
+        width: 20px;
+        margin-bottom: 0px;
+    }
+
+    .quotesection .description p {
+        font-size: 18px;
+    }
+
+    .quotesection .description p.author {
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
+
+@media(max-width:575.8px) {
+    .circleswrap {
+        display: block;
+    }
+
+    .circlebox {
+        margin-left: 0;
+    }
+
+    .hero__content {
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .hero-wave {
+        height: 40px;
+    }
+
+    .hero {
+        height: calc(100vh + 60px);
+    }
+
+    .features {
+        padding: 40px 0 50px;
+    }
+
+    .ctasection {
+        padding: 50px 0;
+        min-height: 300px;
+    }
+
+    .doelgroepen,
+    .kernsterktes,
+    .referenties,
+    .overons,
+    .quotesection,
+    .contacts {
+        padding: 50px 0;
+    }
+
+    .section__head {
+        margin-bottom: 30px;
+
+        p {
+            font-weight: 400;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .accordeon-header h5 {
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .accordeon-header {
+        min-height: 70px;
+    }
+
+    .accordeon-header .accordeon-arrow {
+        width: 24px;
+    }
+
+    .accordeon-header {
+        padding: 10px 15px 10px 40px;
+    }
+
+    .accordeon-body {
+        padding-left: 40px;
+    }
+
+
+
+
+}
 
 
 
