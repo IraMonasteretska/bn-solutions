@@ -25,21 +25,14 @@ $(document).ready(function () {
     });
 
     // scroll to top
-    document.querySelector('.totop').addEventListener('click', function () {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if ($('.totop').length) {
+        document.querySelector('.totop').addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    });
-
-    // $("nav a").on("click", function (e) {
-    //     var anchor = $(this);
-    //     $('html, body').stop().animate({
-    //         scrollTop: $(anchor.attr('href')).offset().top - 50
-    //     }, 777);
-    //     e.preventDefault();
-    //     return false;
-    // });
+    }
 
     // header
     $(window).on('scroll load', function () {
@@ -50,12 +43,17 @@ $(document).ready(function () {
         }
     });
 
-    $("nav a").on("click", function (e) {
+    $(".header__main nav a").on("click", function (e) {
         var anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $(anchor.attr('href')).offset().top - 50
         }, 777);
         e.preventDefault();
+
+
+        $('.burger2').removeClass('on');
+        $('body').removeClass('openedmenu');
+        $('.mobmenu ').removeClass('show');
     });
 
     // Scroll spy
@@ -63,23 +61,23 @@ $(document).ready(function () {
         return $($(this).attr("href"));
     });
 
-    $(window).on("scroll", function () {
-        let scrollPos = $(this).scrollTop() + 100; // +100 щоб активність мінялась трошки раніше
+    if ($('.header__main').length) {
+        $(window).on("scroll", function () {
+            let scrollPos = $(this).scrollTop() + 100;
 
-        sections.each(function () {
-            let top = $(this).offset().top;
-            let bottom = top + $(this).outerHeight();
+            sections.each(function () {
+                let top = $(this).offset().top;
+                let bottom = top + $(this).outerHeight();
 
-            if (scrollPos >= top && scrollPos < bottom) {
-                let id = "#" + $(this).attr("id");
-                $("nav a").removeClass("active");
-                $('nav a[href="' + id + '"]').addClass("active");
-            }
+                if (scrollPos >= top && scrollPos < bottom) {
+                    let id = "#" + $(this).attr("id");
+                    $("nav a").removeClass("active");
+                    $('nav a[href="' + id + '"]').addClass("active");
+                }
+            });
         });
-    });
-
+    }
     // burger
-    // menu burger
     if ($('.burger2').length) {
         (function () {
             var burger2;
@@ -91,14 +89,11 @@ $(document).ready(function () {
         }).call(this);
     }
 
-    // $('.burger').click(function () {
-    //     $('body').toggleClass('hidden');
-    //     $('.header__colmenu').toggleClass('show');
-    //     window.scrollTo({
-    //         top: 0,
-    //         behavior: 'smooth'
-    //     });
-    // })
+    $('.burger').click(function () {
+        $('body').toggleClass('openedmenu');
+        $('.mobmenu').toggleClass('show');
+
+    })
 
 
 })
