@@ -56,6 +56,15 @@ $(document).ready(function () {
         $('.mobmenu ').removeClass('show');
     });
 
+    $(".scrolllink").on("click", function (e) {
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top - 50
+        }, 777);
+        e.preventDefault();
+    });
+
+
     // Scroll spy
     let sections = $("nav a").map(function () {
         return $($(this).attr("href"));
