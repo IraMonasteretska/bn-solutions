@@ -1,0 +1,433 @@
+.hero-vac {
+    position: relative;
+    overflow: hidden;
+    height: 515px;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(#0B1E25, 0.5);
+    }
+}
+
+.infosection {
+    padding: 0 0 100px 0;
+
+    h2 {
+        color: #181A1C;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .descr {
+        padding-top: 76px;
+
+        p {
+            color: #181A1C;
+            font-weight: 500;
+            line-height: 140%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.wijzoeken {
+    background: #F2F6DD;
+    padding: 100px 0;
+}
+
+.wijzoeken__title {
+    font-family: "Sora", sans-serif;
+    color: #181A1C;
+    font-size: 24px;
+    line-height: 110%;
+    font-weight: 600;
+}
+
+.accordeon__row {
+    position: relative;
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        background: rgba(#2D2D2D, 0.5);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+    }
+
+    &.active {
+        .accstatus {
+            &::before {
+                transform: translateY(-50%) rotate(0deg);
+            }
+        }
+    }
+}
+
+.accordeon__header {
+    position: relative;
+    padding-bottom: 28px;
+    cursor: pointer;
+
+    h3 {
+        margin: 0;
+        color: #181A1C;
+        font-size: 48px;
+        line-height: 110%;
+    }
+
+    .accstatus {
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        right: 0;
+        top: 12px;
+
+        &::after,
+        &::before {
+            content: '';
+            height: 4px;
+            width: 28px;
+            background: #000;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            position: absolute;
+            transition: 0.5s;
+        }
+
+        &::before {
+            transform: translateY(-50%) rotate(90deg);
+        }
+
+    }
+}
+
+.accordeon__body {
+    display: none;
+    padding-bottom: 40px;
+
+    p,
+    li {
+        color: #181A1C;
+        font-weight: 500;
+    }
+
+    li {
+        margin-bottom: 3px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul {
+        padding-left: 20px;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .green-btn {
+        margin-top: 25px;
+    }
+
+    h5 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        line-height: 110%;
+        font-weight: 600;
+        font-family: "Sora", sans-serif;
+    }
+}
+
+.infosection.bieden {
+    padding: 120px 0 230px;
+
+    .descr {
+        padding-top: 0;
+    }
+}
+
+.infosection {
+    position: relative;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        li {
+            position: relative;
+            padding-left: 44px;
+            font-size: 24px;
+            color: #181A1C;
+            font-family: "Sora", sans-serif;
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                left: 0;
+                top: 4px;
+                background: url('../img/check-mark.svg') no-repeat center / 100%;
+            }
+        }
+    }
+}
+
+.wavetop {
+        height: 150px;
+        position: absolute;
+        left: 0;
+        top: -149px;
+        width: 100%;
+        object-fit: 100% 100%;
+        object-position: 100% 0;
+    }
+
+.solliciteren {
+    padding: 70px 0 120px;
+    position: relative;
+    z-index: 2;
+    background: #181A1C;
+
+    
+
+    .descr {
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    p {
+        max-width: 794px;
+        margin: 0 auto 28px;
+        color: #fff;
+        font-weight: 500;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        display: inline-block;
+        color: $main-green;
+        font-size: 24px;
+        line-height: 110%;
+        font-weight: 600;
+        font-family: "Sora", sans-serif;
+        margin-bottom: 28px;
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 0;
+            height: 2px;
+            background: $main-green;
+            transition: 0.3s;
+            display: block;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            position: absolute;
+            bottom: -4px;
+        }
+
+        &:hover {
+            color: #a8d137;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.infosection .descr p:last-child {
+    margin-bottom: 0;
+}
+
+@media(max-width:1599.8px) {
+    .wavetop {
+        height: 120px;
+        top: -119px;
+    }
+
+    .accordeon__header h3 {
+        font-size: 42px;
+    }
+
+    .infosection ul li {
+        font-size: 21px;
+    }
+
+    .infosection.bieden {
+        padding: 100px 0 200px;
+    }
+
+    .solliciteren {
+        padding-bottom: 100px;
+    }
+
+    .accordeon__header .accstatus {
+        top: 5px;
+    }
+}
+
+@media(max-width:1599.8px) {
+    .wavetop {
+        height: 100px;
+        top: -99px;
+    }
+
+    .accordeon__header h3 {
+        font-size: 36px;
+    }
+
+    .accordeon__body h5 {
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+
+    .accordeon__body .green-btn {
+        margin-top: 15px;
+    }
+
+    .accordeon__body {
+        padding-bottom: 20px;
+    }
+}
+
+@media(max-width:991.8px) {
+    .infosection {
+        padding: 50px 0 70px;
+    }
+
+    .infosection .descr {
+        padding-top: 0;
+    }
+
+    .infosection h2:last-child {
+        margin-bottom: 30px;
+    }
+
+    .wijzoeken {
+        padding: 70px 0;
+    }
+
+    .wijzoeken__title {
+        margin-bottom: 30px;
+    }
+
+    .infosection.bieden {
+        padding: 70px 0 160px;
+    }
+
+    .solliciteren {
+        padding-bottom: 70px;
+    }
+
+}
+
+@media(max-width:767.8px) {
+    .hero-vac {
+        height: 400px;
+    }
+
+    .accordeon__header h3 {
+        font-size: 28px;
+    }
+
+}
+
+@media(max-width:575.8px) {
+    .infosection {
+        padding: 50px 0 70px;
+    }
+
+    .infosection h2:last-child {
+        margin-bottom: 24px;
+    }
+
+    .wijzoeken {
+        padding: 50px 0;
+    }
+
+    .accordeon__header h3 {
+        font-size: 24px;
+    }
+
+    .accordeon__header {
+        padding-bottom: 20px;
+    }
+
+    .accordeon__row {
+        margin-bottom: 30px;
+    }
+
+    .accordeon__body h5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .accordeon__body {
+        padding-top: 15px;
+    }
+
+    .infosection.bieden {
+        padding: 50px 0 80px;
+    }
+
+    .infosection ul li {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .infosection ul li::after {
+        top: -1px;
+    }
+
+     .wavetop {
+        height: 40px;
+        top: -39px;
+    }
+
+    .solliciteren {
+        padding: 50px 0;
+    }
+
+    .solliciteren h2 {
+        margin-bottom: 24px;
+    }
+
+
+    .wijzoeken__title {
+        font-size: 21px;
+    }
+}

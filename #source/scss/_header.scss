@@ -19,9 +19,9 @@ header.header {
                 font-family: "Inter", sans-serif;
                 color: #fff;
                 font-weight: 500;
-                font-size: 18px;
+                font-size: 22px;
                 display: inline-block;
-                padding: 40px 25px 25px 25px;
+                padding: 40px 16px 25px 16px;
                 text-decoration: none;
                 transition: 0.5s;
 
@@ -41,8 +41,8 @@ header.header {
         background: #181A1C;
 
         ul li a {
-            padding-top: 25px;
-            padding-bottom: 25px;
+            padding-top: 28px;
+            padding-bottom: 28px;
 
         }
     }
@@ -68,7 +68,7 @@ header.header {
 
 @media(max-width:1599.8px) {
     header.header ul li a {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .header__logo img {
@@ -96,8 +96,8 @@ header.header {
 
     header.header.scroll ul li a,
     header.header.header__black ul li a  {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
     
 
