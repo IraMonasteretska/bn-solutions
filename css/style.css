@@ -365,6 +365,7 @@ h3.white {
   overflow: hidden;
   padding: 63px 0;
   min-height: 340px;
+  text-align: right;
 }
 .ctasection::after {
   content: "";
@@ -654,6 +655,12 @@ h3.white {
   position: relative;
   overflow: hidden;
 }
+.sectiongroup .sectbg {
+  -o-object-position: 0 0;
+     object-position: 0 0;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
 .sectiongroup::after {
   content: "";
   display: block;
@@ -664,6 +671,17 @@ h3.white {
   bottom: 0;
   background: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(80%, rgba(255, 255, 255, 0)));
   background: linear-gradient(to top, #fff, rgba(255, 255, 255, 0) 80%);
+  z-index: 1;
+}
+.sectiongroup::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -727,18 +745,23 @@ h3.white {
 
 .quotesection {
   background: #D9C1B4;
-  padding: 98px 0 90px;
+  padding: 140px 0 90px;
 }
 .quotesection img {
   border-radius: 10px;
 }
+.quotesection .description {
+  position: relative;
+}
 .quotesection .description img {
   height: 48px;
-  margin-bottom: 35px;
+  position: absolute;
+  left: -50px;
+  top: -30px;
 }
 .quotesection .description p {
   color: #181A1C;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 120%;
   font-family: "Sora", sans-serif;
   margin-bottom: 40px;
@@ -753,15 +776,30 @@ h3.white {
   font-weight: 600;
 }
 
-.limg img {
-  max-width: 240px;
+.quotesection .limg {
+  width: 100%;
+  max-width: 357px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 357px;
+          flex: 0 0 357px;
+  padding-top: 34px;
 }
-
-.rimg {
+.quotesection .rimg {
   text-align: right;
+  width: 100%;
+  max-width: 357px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 357px;
+          flex: 0 0 357px;
+  padding-top: 34px;
 }
-.rimg img {
-  max-width: 326px;
+.quotesection .description {
+  width: 100%;
+  max-width: calc(100% - 714px);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% - 714px);
+          flex: 0 0 calc(100% - 714px);
+  padding: 0 30px 0 50px;
 }
 
 .contacts {
@@ -772,9 +810,13 @@ h3.white {
   position: relative;
   z-index: 2;
 }
+.contacts .fill-img {
+  -o-object-position: 0 0;
+     object-position: 0 0;
+}
 
 .contact-box {
-  background: #fff;
+  background: #B9E640;
   border-radius: 10px;
   padding: 40px;
 }
@@ -941,6 +983,24 @@ h3.white {
   .whatwedo__item p {
     font-size: 14px;
   }
+  .quotesection .rimg,
+  .quotesection .limg {
+    max-width: 200px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 200px;
+            flex: 0 0 200px;
+    padding-top: 0;
+  }
+  .quotesection .description {
+    max-width: calc(100% - 400px);
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(100% - 400px);
+            flex: 0 0 calc(100% - 400px);
+  }
+  .quotesection .description img {
+    top: -50px;
+    left: 50px;
+  }
 }
 @media (max-width: 991.8px) {
   .circlebox {
@@ -969,6 +1029,7 @@ h3.white {
     width: 30px;
     height: auto;
     margin-bottom: 10px;
+    left: 15px;
   }
   .map iframe {
     aspect-ratio: 16/8;
@@ -979,6 +1040,9 @@ h3.white {
   }
   .accordeon-header h5 {
     padding-left: 45px;
+  }
+  .quotesection .description {
+    padding: 0 15px;
   }
   .whatwedo {
     padding-bottom: 70px;
@@ -1030,6 +1094,24 @@ h3.white {
   .quotesection .description p.author {
     font-weight: 500;
     font-size: 16px;
+  }
+  .quotesection .rimg, .quotesection .limg {
+    display: none;
+  }
+  .quotesection .description {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  .quotesection .description img {
+    top: initial;
+    position: relative;
+    left: initial;
+  }
+  .sectiongroup .sectbg {
+    -o-object-position: 30% 0;
+       object-position: 30% 0;
   }
 }
 @media (max-width: 575.8px) {
@@ -1186,6 +1268,13 @@ h3.white {
   }
   .contact-box ul li {
     padding-left: 35px;
+  }
+  .ctasection {
+    min-height: initial;
+  }
+  .sectiongroup .sectbg {
+    -o-object-position: 40% 0;
+       object-position: 40% 0;
   }
 }
 .service-content {
