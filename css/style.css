@@ -1216,6 +1216,9 @@ h3.white {
   .contacts {
     padding: 50px 0;
   }
+  .contacts {
+    padding: 100px 0;
+  }
   .section__head {
     margin-bottom: 30px;
   }
