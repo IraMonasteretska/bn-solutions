@@ -140,6 +140,10 @@
         position: relative;
         z-index: 2;
     }
+
+    .fill-img {
+        object-position: 50% 50%;
+    }
 }
 
 .doelgroepen {
@@ -254,6 +258,13 @@
     }
 
     .imgwrap {
+        position: relative;
+        overflow: hidden;
+
+        video {
+            width: 100%;
+        }
+
         img {
             border-radius: 10px;
             vertical-align: top;
@@ -580,7 +591,7 @@
 }
 
 .contacts {
-    padding: 90px 0 185px;
+    padding: 144px 0;
     position: relative;
 
     .container {
@@ -644,15 +655,38 @@
 }
 
 .map {
+    aspect-ratio: 16 / 5;
+    position: relative;
+    overflow: hidden;
+
     iframe {
-        aspect-ratio: 16 / 5;
+        width: 100% !important;
+        height: 100% !important;
         vertical-align: top;
     }
 }
 
-// #s1,#s2,#s3,#s4,#s5,#s6{
-//     scroll-margin-top: 80px;
-// }
+.show-tel {
+    display: none;
+}
+
+.ctasection {
+    display: flex;
+    align-items: center;
+
+    h2 {
+        text-align: left;
+        margin: 0;
+        padding-left: 50px;
+    }
+
+
+}
+
+.ctasection-btn {
+    text-align: right;
+    padding-right: 50px;
+}
 
 @media(max-width:1599.8px) {
     .hero__content {
@@ -755,6 +789,7 @@
     }
 
 
+
 }
 
 @media(max-width:1199.8px) {
@@ -841,6 +876,12 @@
         left: 50px;
     }
 
+    .contacts {
+        padding: 80px 0;
+    }
+
+
+
 }
 
 @media(max-width:991.8px) {
@@ -879,9 +920,15 @@
         left: 15px;
     }
 
-    .map iframe {
-        aspect-ratio: 16 / 8;
-        vertical-align: top;
+    .map {
+        aspect-ratio: inherit;
+        height: 400px;
+
+        iframe {
+            width: 100% !important;
+            height: 100% !important;
+            vertical-align: top;
+        }
     }
 
     .accordeon-header {
@@ -893,7 +940,7 @@
     }
 
     .quotesection .description {
-        padding: 0 15px ;
+        padding: 0 15px;
     }
 
 
@@ -933,6 +980,10 @@
     .quotesection .description p {
         font-size: 21px;
     }
+
+    .contacts {
+        padding: 50px 0;
+    }
 }
 
 @media(max-width:767.8px) {
@@ -964,7 +1015,8 @@
         font-size: 16px;
     }
 
-    .quotesection .rimg, .quotesection .limg {
+    .quotesection .rimg,
+    .quotesection .limg {
         display: none;
     }
 
@@ -981,6 +1033,24 @@
 
     .sectiongroup .sectbg {
         object-position: 30% 0;
+    }
+
+    .ctasection h2 {
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .ctasection-btn {
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        text-align: left;
+    }
+
+    .ctasection {
+        min-height: 300px;
+    }
+
+    .section__head p br {
+        display: none;
     }
 }
 
@@ -1155,12 +1225,16 @@
         display: none;
     }
 
-    .map iframe {
-        aspect-ratio: 5 / 4;
+    .map {
+        height: 300px;
     }
 
-    .contact-box ul li {
-        padding-left: 35px;
+    .contact-box {
+        max-width: 350px;
+
+        ul li {
+            padding-left: 35px;
+        }
     }
 
     .ctasection {
@@ -1169,6 +1243,14 @@
 
     .sectiongroup .sectbg {
         object-position: 40% 0;
+    }
+
+    .show-tel {
+        display: block;
+    }
+
+    .hide-tel {
+        display: none;
     }
 
 }

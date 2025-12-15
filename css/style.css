@@ -204,9 +204,6 @@ h3.white {
   h1 {
     font-size: 72px;
   }
-  h2 {
-    font-size: 48px;
-  }
   h3 {
     font-size: 42px;
   }
@@ -381,6 +378,10 @@ h3.white {
   position: relative;
   z-index: 2;
 }
+.ctasection .fill-img {
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
 
 .doelgroepen {
   padding: 100px 0;
@@ -486,6 +487,13 @@ h3.white {
 }
 .kernsterktes-content h2 {
   margin-bottom: 88px;
+}
+.kernsterktes-content .imgwrap {
+  position: relative;
+  overflow: hidden;
+}
+.kernsterktes-content .imgwrap video {
+  width: 100%;
 }
 .kernsterktes-content .imgwrap img {
   border-radius: 10px;
@@ -803,7 +811,7 @@ h3.white {
 }
 
 .contacts {
-  padding: 90px 0 185px;
+  padding: 144px 0;
   position: relative;
 }
 .contacts .container {
@@ -858,9 +866,38 @@ h3.white {
   font-weight: 500;
 }
 
-.map iframe {
+.map {
   aspect-ratio: 16/5;
+  position: relative;
+  overflow: hidden;
+}
+.map iframe {
+  width: 100% !important;
+  height: 100% !important;
   vertical-align: top;
+}
+
+.show-tel {
+  display: none;
+}
+
+.ctasection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ctasection h2 {
+  text-align: left;
+  margin: 0;
+  padding-left: 50px;
+}
+
+.ctasection-btn {
+  text-align: right;
+  padding-right: 50px;
 }
 
 @media (max-width: 1599.8px) {
@@ -1001,6 +1038,9 @@ h3.white {
     top: -50px;
     left: 50px;
   }
+  .contacts {
+    padding: 80px 0;
+  }
 }
 @media (max-width: 991.8px) {
   .circlebox {
@@ -1031,8 +1071,13 @@ h3.white {
     margin-bottom: 10px;
     left: 15px;
   }
+  .map {
+    aspect-ratio: inherit;
+    height: 400px;
+  }
   .map iframe {
-    aspect-ratio: 16/8;
+    width: 100% !important;
+    height: 100% !important;
     vertical-align: top;
   }
   .accordeon-header {
@@ -1071,6 +1116,9 @@ h3.white {
   .quotesection .description p {
     font-size: 21px;
   }
+  .contacts {
+    padding: 50px 0;
+  }
 }
 @media (max-width: 767.8px) {
   .circlebox {
@@ -1095,7 +1143,8 @@ h3.white {
     font-weight: 500;
     font-size: 16px;
   }
-  .quotesection .rimg, .quotesection .limg {
+  .quotesection .rimg,
+  .quotesection .limg {
     display: none;
   }
   .quotesection .description {
@@ -1112,6 +1161,20 @@ h3.white {
   .sectiongroup .sectbg {
     -o-object-position: 30% 0;
        object-position: 30% 0;
+  }
+  .ctasection h2 {
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  .ctasection-btn {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    text-align: left;
+  }
+  .ctasection {
+    min-height: 300px;
+  }
+  .section__head p br {
+    display: none;
   }
 }
 @media (max-width: 575.8px) {
@@ -1263,8 +1326,11 @@ h3.white {
   .rimg {
     display: none;
   }
-  .map iframe {
-    aspect-ratio: 5/4;
+  .map {
+    height: 300px;
+  }
+  .contact-box {
+    max-width: 350px;
   }
   .contact-box ul li {
     padding-left: 35px;
@@ -1275,6 +1341,12 @@ h3.white {
   .sectiongroup .sectbg {
     -o-object-position: 40% 0;
        object-position: 40% 0;
+  }
+  .show-tel {
+    display: block;
+  }
+  .hide-tel {
+    display: none;
   }
 }
 .service-content {
