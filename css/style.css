@@ -1379,6 +1379,8 @@ h3.white {
 .service__description h1 {
   font-size: 56px;
   line-height: 110%;
+  position: relative;
+  padding-left: 80px;
 }
 .service__description h2 {
   font-size: 48px;
@@ -1406,7 +1408,11 @@ h3.white {
 
 .service__icon {
   width: 64px;
-  margin-bottom: 28px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .serviceinfo {
@@ -1486,10 +1492,12 @@ h3.white {
 @media (max-width: 767.8px) {
   .service__icon {
     width: 48px;
-    margin-bottom: 20px;
   }
   .service-content {
     padding: 120px 0 50px 0;
+  }
+  .service__description h1 {
+    padding-left: 70px;
   }
 }
 @media (max-width: 575.8px) {
@@ -1499,7 +1507,8 @@ h3.white {
   .service__description h1 {
     font-size: 36px;
     line-height: 110%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    padding-left: 60px;
   }
   .service__description h2 {
     font-size: 32px;
