@@ -105,39 +105,62 @@ $(document).ready(function () {
     })
 
 
-   $(function () {
-    $(".accordeon").each(function () {
-        const acc = $(this);
+    $(function () {
+        $(".accordeon").each(function () {
+            const acc = $(this);
 
-        // Відкрити перший елемент
-        const firstItem = acc.find(".accordeon__row").first();
-        firstItem.addClass("active");
-        firstItem.find(".accordeon__body").slideDown(0);
+            // Відкрити перший елемент
+            const firstItem = acc.find(".accordeon__row").first();
+            firstItem.addClass("active");
+            firstItem.find(".accordeon__body").slideDown(0);
 
-        acc.find(".accordeon__header").click(function () {
-            const item = $(this).parent();
+            acc.find(".accordeon__header").click(function () {
+                const item = $(this).parent();
 
-            // Якщо клік по активному — toggle (закриваємо)
-            if (item.hasClass("active")) {
-                item.removeClass("active")
-                    .find(".accordeon__body")
-                    .slideUp();
-            } else {
-                // Закриваємо всі інші
-                acc.find(".accordeon__row.active")
-                    .removeClass("active")
-                    .find(".accordeon__body")
-                    .slideUp();
+                // Якщо клік по активному — toggle (закриваємо)
+                if (item.hasClass("active")) {
+                    item.removeClass("active")
+                        .find(".accordeon__body")
+                        .slideUp();
+                } else {
+                    // Закриваємо всі інші
+                    acc.find(".accordeon__row.active")
+                        .removeClass("active")
+                        .find(".accordeon__body")
+                        .slideUp();
 
-                // Відкриваємо клікнутий
-                item.addClass("active")
-                    .find(".accordeon__body")
-                    .slideDown();
-            }
+                    // Відкриваємо клікнутий
+                    item.addClass("active")
+                        .find(".accordeon__body")
+                        .slideDown();
+                }
+            });
         });
     });
-});
 
+    var swiper = new Swiper(".platforms-slider", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        speed: 700,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        on: {
+            slideChange: function () {
+                const activeSlide = this.slides[this.activeIndex];
+                const pagination = this.pagination.el;
+
+                pagination.classList.toggle('greenpag', activeSlide.classList.contains('green'));
+            },
+        },
+        on: {
+            click: function () {
+                this.slideNext();
+            },
+        },
+        
+    });
 
 
 })
